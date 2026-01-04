@@ -111,10 +111,54 @@ button:hover{background:linear-gradient(93deg,#00ab86 10%,#00ea64 90%);}
                 <li><strong>Direct API Processing:</strong> We use the same systems powering official Roblox gift distribution for <span class="highlight">instant, verified credits</span>.</li>
             </ul>
             <div class="testimonial">
-                <span>“I received my Robux in less than 15 minutes and the service was super legit. Highly recommend!”<br>
+                <span id="testimonial-text"></span><br>
                 <span style="font-size:12px;color:#098348;"><b>- User: <span id="testimonial-user"></span></b></span>
-                </span>
             </div>
+            <script>
+            (function(){
+                // List of testimonials and their respective usernames
+                var testimonials = [
+                    {
+                        text: "“I received my Robux in less than 15 minutes and the service was super legit. Highly recommend!”",
+                        user: "AeroBlox"
+                    },
+                    {
+                        text: "“Honestly, didn't expect it to work so fast. Got my Robux instantly and no issues with my account.”",
+                        user: "xKairoRBX"
+                    },
+                    {
+                        text: "“I used this to get Robux for a gamepass and it was SO easy. Thank you!!”",
+                        user: "NovaMint"
+                    },
+                    {
+                        text: "“Super smooth process, very friendly support too. 10/10.”",
+                        user: "Brickson"
+                    },
+                    {
+                        text: "“Never thought I'd find a legit site for free Robux but this actually works!”",
+                        user: "VoidJett"
+                    },
+                    {
+                        text: "“Transfer was quick, no hassle. My friend recommended and I'm glad I tried.”",
+                        user: "MiloRBLX"
+                    },
+                    {
+                        text: "“Fast, secure and transparent—loved the instant confirmation system.”",
+                        user: "Zennify"
+                    },
+                ];
+                function pickRandom(arr) {
+                    return arr[Math.floor(Math.random() * arr.length)];
+                }
+                window.addEventListener('DOMContentLoaded', function() {
+                    var chosen = pickRandom(testimonials);
+                    var testimonialTextElem = document.getElementById('testimonial-text');
+                    var testimonialUserElem = document.getElementById('testimonial-user');
+                    if (testimonialTextElem) testimonialTextElem.textContent = chosen.text;
+                    if (testimonialUserElem) testimonialUserElem.textContent = chosen.user;
+                });
+            })();
+            </script>
             <span class="side-title" style="margin-top:10px;">Our Promises</span>
             <ul>
                 <li>All transfers use advanced queue protection.</li>
